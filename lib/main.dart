@@ -14,6 +14,13 @@ void main() {
   monitor2.startService("PaymentService");
   monitor2.stopService("PaymentService");
 
+   print("\n--- Demo: AppMonitor with MemoryLogger (optional) ---");
+  var memory = MemoryLogger();
+  var monitor3 = AppMonitor(memory);
+  monitor3.startService("CacheService");
+  print("Memory logs: ${memory.logMemory}");
+
 }
+
 
 
